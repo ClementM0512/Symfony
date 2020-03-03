@@ -10,7 +10,7 @@
     		{% endblock %}
 		</title>
         {% block stylesheets %}
-        	<link rel="stylesheet" type="text/css" href="{{ asset('Style/stylesbootswatch.css') }}" />
+        	<link rel="stylesheet" type="text/css" href="{{ asset('Style/bootstrap.css') }}" />
         	{# <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" /> #}
         {% endblock %}
     </head>
@@ -24,8 +24,11 @@
             <div id="content">
                 
                 {% for famtoto in toto %}
-                <ul>
-                    {{famtoto}}
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" >{{famtoto}}</a>
+                    </li>
+                    
                 </ul>
                 {% endfor %}
                 
