@@ -13,7 +13,7 @@ class homeController extends AbstractController
   public function home ($qqch)
   {
     $number = random_int(0,100);
-      return $this->render('test.html.twig',[
+      return $this->render('front_pages/acceuil.html.twig',[
         'qqch' => $qqch,
         'number' => $number
         ]);

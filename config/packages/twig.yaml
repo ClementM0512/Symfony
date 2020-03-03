@@ -6,3 +6,4 @@ twig:
     globals:
         nom: "Cours Symfony"
         contactmail: "stephen.soupart@gmail.com"
+        toto: ['tata','titi','tutu']

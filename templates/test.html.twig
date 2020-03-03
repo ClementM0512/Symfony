@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-        <link rel="stylesheet" href="Style/stylesbootswatch.css">
+        <link rel="stylesheet" href="{{asset('Style/stylesbootswatch.css')}}">
+        <link rel="javascript" href="{{asset('Js/app.js')}}">
         {% endblock %}
     </head>
     <body class="container">
