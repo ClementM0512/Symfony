@@ -1,17 +1,21 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class homeController
+class homeController extends AbstractController
 {
   /**
   *@route("/{qqch}")
   */
   public function home ($qqch)
   {
-    $number = ramdom_int(0,100);
-      return new Response('<html><body>accueil; vous proposer' .$qqch.'et le nombre est '.$number.'</body></html>');
+    $number = random_int(0,100);
+      return $this->render('test.html.twig',[
+        'qqch' => $qqch,
+        'number' => $number
+        ]);
   }
 }
