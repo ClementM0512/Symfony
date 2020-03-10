@@ -23,6 +23,8 @@ class JeuParametrageController extends AbstractController
         if($request->get('qui') !== null)
         {
             $qui = $request->get('qui');
+            $age = $request->get('age');
+            $datNai = $request->get('datNai');
             // Gestion des erreurs
             if($qui == 'Prénom' || $qui =='')
             {
@@ -54,6 +56,8 @@ class JeuParametrageController extends AbstractController
                 
                 // Sauvegarde du prenom en session
                 $session->set('qui', $qui);
+                $session->set('age', $age);
+                $session->set('datNai', $datNai);
                 // Génération d'un code aléatoire
                 $random = random_int(1, 1000000000);
                 $session->set('id_visiteur', $random);

@@ -7,4 +7,4 @@ twig:
         nom: "Cours Symfony"
         contactmail: "stephen.soupart@gmail.com"
         toto: ['tata','titi','tutu']
-        showDebug: true
+        showDebug: false

@@ -1,0 +1,28 @@
+{# jeu.html.twig #}
+{% extends "includes/_front.html.twig" %}
+
+
+	{% block content %}
+		<div class="container">
+			<form action="{{ path('JeuParametrage') }}" method="post">
+				<div class="form-group">
+					<label for="qui">Votre prénom</label>
+					<input aria-describedby="prenomHelp" class="form-control" type='text' method="POST" value="" placeholder="Prénom" id="qui" name="qui" required/>
+					<small id="prenomHelp" class="form-text text-muted">trois caractères au moins</small>
+					<label for="qui">Votre age</label>
+					<input aria-describedby="prenomHelp" class="form-control" type='text' method="POST" value="" placeholder="Age" id="age" name="age" required/>
+					<label for="qui">Votre date de naissance</label>
+					<input aria-describedby="prenomHelp" class="form-control" type='date' method="POST" value="" placeholder="Date de Naissance" 
+					id="datNai" name="datNai" required/>
+
+					
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary" type="submit" class="btn btn-outline-success">
+						{# <a href="{{ path('Jeu') }}">COMMENCER LE JEU</a> #}
+						COMMENCER LE JEU
+					</button>
+				</div>
+			</form>
+		</div>
+	{% endblock %}

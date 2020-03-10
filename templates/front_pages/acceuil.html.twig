@@ -1,7 +1,6 @@
 {% extends "includes/_front.html.twig" %}
 
 {% block body %}
-    test {{ qqch }} abc {{ number }}
     <div class="jumbotron">
     <h1 class="display-4">{{ nom }}</h1>
     <p class="lead">Trouver qui est le coupable ! Tel va être votre objectif ! Serez-vous à la hauteur ? En combien de coups parviendrez-vous à identifier l'auteur du forfait ?</p>
@@ -11,7 +10,25 @@
         {# <a class="btn btn-primary btn-lg" href="#" mailto="{{ contactMail }}" role="button" title="Ecrivez à l'auteur">Pour en savoir plus sur ce jeu</a> #}
     </p>
     </div>
-    
+    test {{ qqch }} abc {{ number }}
+
+    {% set routeJeuParametrage = path('JeuParametrage') %}
+
+    <div class="row">
+        <button onclick="window.location.pathname = '{{ routeJeuParametrage }}'" type="button" class="btn-game btn btn-outline-success">
+            {# <a href="{{ path('Jeu') }}">COMMENCER LE JEU</a> #}
+            PARAMETRER LE JEU
+        </button>
+    </div>
+
+    {% set routeError = path('Error', {'errCode':'102'}) %}
+
+    <div class="row">
+        <button onclick="window.location.pathname = '{{ routeError }}'" type="button" class="btn-game btn btn-outline-warning">
+            {# <a href="{{ path('Jeu') }}">COMMENCER LE JEU</a> #}
+            Error
+        </button>
+    </div>
 
     {{ parent() }}
 {% endblock %}

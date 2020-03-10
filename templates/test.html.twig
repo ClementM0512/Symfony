@@ -5,11 +5,14 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="{{asset('Style/bootstrap.css')}}">
-        <link rel="javascript" href="{{asset('Js/app.js')}}">
+        <link rel="stylesheet" href="{{asset('Style/app.css')}}">
+        
         {% endblock %}
     </head>
     <body class="container">
         {% block body %}Vous avez voter le numéro {{ qqch }}. Le numéro gagnant est {{ number }} {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <link rel="javascript" href="{{asset('Js/app.js')}}">
+        {% endblock %}
     </body>
 </html>

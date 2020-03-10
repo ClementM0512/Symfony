@@ -1,0 +1,17 @@
+{# jeu.html.twig #}
+{% extends "includes/_front.html.twig" %}
+
+
+	{% block content %}
+		<div class="container">
+			
+			<h1>LE JEU A COMMENCE POUR {{ app.session.get('qui') }}</h1>
+
+			
+			<h2>Votre identifiant temporaire : {{ app.session.get('id_visiteur') }}</h2>
+			
+			<h3> L'age de {{ app.session.get('qui') }} est : {{ app.session.get('age') }}</h3>
+			<h3>La date de naissance de {{ app.session.get('qui') }} est : {{ app.session.get('datNai') }}</h3>
+
+		</div>
+	{% endblock %}
