@@ -1,19 +1,23 @@
 <footer>
-    Copyright 2011 by <a href="http://domain.invalid/">MOMO</a>.
+    Copyright 2011 by <a href="http://domain.invalid/">MOMO</a>
 
-    {# <div id="debug">
-    <h3>Debug</h3>
-    <h4>user</h4>
-    {# <p>{{app.user}}</p> #}
-    {# <h4>session</h4>
-    <pre>
-        {{ dump(app.session) }}
-    </pre>
-    <h4>environment</h4>
-    <pre>
-        {{ dump(app.environment) }}
-    </pre>
-    <h4>request</h4>
-    <p>{{app.request}}</p>
-    </div>  #}
+    {% if showDebug %}
+    <div id="debug">
+
+    <div class="jumbotron">
+        <h3 class="display-3">Debug</h3>
+        {# <h4>user</h4>
+        <p>{{app.user}}</p> #}
+        <h4>Session</h4>
+        <pre>
+            {{ dump(app.session) }}
+        </pre>
+        <h4>Environment</h4>
+        <pre>
+            {{ dump(app.environment) }}
+        </pre>
+        <h4>Request</h4>
+        <p>{{app.request}}</p>
+    </div> 
+    {% endif %}
 </footer>

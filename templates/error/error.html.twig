@@ -1,0 +1,15 @@
+{% extends "includes/_back.html.twig" %}
+
+{% block title %}Error !!!{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+    <h1>Error code: {{ errCode }}</h1>
+    Message error : {{ errMsg }}
+    
+    
+</div>
+{{ parent() }}
+{% endblock %}
