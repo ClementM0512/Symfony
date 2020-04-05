@@ -53,7 +53,7 @@ class JeuParametrageController extends AbstractController
                 ]);
             } else {
                 //var_dump($qui);
-                
+
                 // Sauvegarde du prenom en session
                 $session->set('qui', $qui);
                 $session->set('age', $age);
@@ -61,14 +61,14 @@ class JeuParametrageController extends AbstractController
                 // Génération d'un code aléatoire
                 $random = random_int(1, 1000000000);
                 $session->set('id_visiteur', $random);
-                
-                var_dump($random);
 
+                // var_dump($random);
                 return $this->redirectToRoute('JeuTour', [
                     'nbr_tour' => 0
                 ]);
             }
-        } else {
+        } 
+        else {
             return $this->render('front_pages/jeuParametrage.html.twig', [
                 #'number' => $number,
             ]);

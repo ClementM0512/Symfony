@@ -7,6 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use App\Services\APISymfony;
 
 class JeuTourController extends AbstractController
 {
@@ -28,10 +29,17 @@ class JeuTourController extends AbstractController
 
         // Valider la saisie et controller la réponse
 
+
+
+        $api = new APISymfony();
+        $suspects = json_decode($api->getSuspects());
+
         $number = random_int(0, 100);
         return $this->render('front_pages/jeuTour.html.twig', [
             'number' => $number,
+            'suspects' => $suspects
         ]);
-        
     }
+
+    
 }

@@ -1,0 +1,15 @@
+<div id="suspects">
+{% for suspect in suspects %}
+
+    <div class="card border-warning mb-3 suspect" style="max-width: 20rem;">
+        <div class="card-header">{{ suspect.name }}</div>
+        <div class="card-body">
+            email: {{suspect.email}} <br>
+            age: {{suspect.age}}   genre: {{suspect.genre}}
+            <a href="{{ path('insertSuspect', {'id': suspect.id}) }}">
+            <button type="button" class="btn btn-danger">Accuser</button>
+            </a>
+        </div>
+    </div>
+{% endfor %}
+</div>
